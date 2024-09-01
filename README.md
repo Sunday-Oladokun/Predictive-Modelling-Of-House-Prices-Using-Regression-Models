@@ -53,28 +53,15 @@ Three models were trained and tested on the datasets, both with and without outl
 
 All models were evaluated using Root Mean Square Error (RMSE), Mean Squared Error (MSE), and R² scores. Visual evaluations included scatter plots and bar charts to assess model performance.
 
-## Results and Discussion
-
-### Categorical Variables Analysis
-- **Bldg_Type:** "OneFam" is the most common, comprising 82.12% of properties.
-- **House_Style:** "One_Story" is predominant, appearing in 49.64% of cases.
-- **Overall_Cond:** "Average" condition is most frequent, representing 53.89% of the dataset.
-- **Exter_Cond:** "Typical" exterior condition covers 86.79% of properties.
-
-### Descriptive Statistics
-- **Lot_Frontage:** Average of 55 feet, with moderate variation.
-- **Lot_Area:** Mean of 10,051 square feet, indicating considerable variability.
-- **Year_Built:** Majority constructed around 1970, with a mix of older and newer homes.
-- **Total_Bsmt_SF:** Average of 1,028 square feet, showing a wide variety in basement sizes.
-- **Sale_Price:** Average of $176,115, with significant variation.
-
-### Feature Distributions
-- **Lot_Frontage:** Nearly symmetric distribution, slightly skewed.
-
-This analysis provided valuable insights into the dataset and informed the subsequent model training phase.
 
 ## Conclusion
 The project successfully developed and evaluated multiple machine learning models for predicting house prices, offering a robust tool for stakeholders in the real estate market. The final model, selected based on evaluation metrics, provides accurate and reliable price predictions, helping to better understand the factors influencing property values.
+
+The XGBoost Regressor emerged as the best performer in our analysis, particularly when trained on the dataset without outliers. This model demonstrated significantly lower errors, as indicated by the Mean Squared Error (MSE) and Root Mean Squared Error (RMSE), and exhibited superior explanatory power with a higher R-squared (R²) value.
+
+The impact of outliers on model performance was substantial. Generally, removing outliers led to improved performance across all models. However, the most notable enhancement was observed in the XGBoost model, highlighting its sensitivity to outliers and its ability to benefit greatly from their removal.
+In terms of model robustness, both the Random Forest and XGBoost models showed greater resilience to outliers compared to Linear Regression. Despite this, all models experienced performance gains when outliers were removed, underscoring the importance of outlier management in achieving accurate predictions.
+
 
 ## Future Work
 Future enhancements could include exploring additional features, incorporating more complex models, and deploying the final model for real-world applications.
